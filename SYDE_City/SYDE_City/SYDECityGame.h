@@ -33,8 +33,6 @@ public:
 	ConsoleWindow MainMap_Draw(ConsoleWindow window, int windowWidth, int windowHeight);
 	ConsoleWindow DrawStructureAtCenter(ConsoleWindow window);
 
-	ConsoleWindow DrawStructuresOnMap(ConsoleWindow window);
-
 	bool CanPlace();
 
 	AssetsClass astVars;
@@ -46,7 +44,7 @@ private:
 
 	CustomAsset m_bg;
 	CustomAsset m_Map;
+	CustomAsset m_StructureOverlayLand;
+	CustomAsset m_StructureOverlayBuildings;
 	CustomAsset m_Structure;
-
-	std::vector<_SCB_Structure> _structures = std::vector<_SCB_Structure>();
 };

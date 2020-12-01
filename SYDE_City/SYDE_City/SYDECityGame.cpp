@@ -5,6 +5,8 @@ SYDECityGame::SYDECityGame()
 	// ASSET LOADING
 	m_bg = CustomAsset(60, 30, astVars.get_bmp_as_direct_colour_class_array(L"EngineFiles\\Bitmaps\\bg.bmp", 30, 30));
 	m_Map = CustomAsset(2000, 1000, astVars.get_bmp_as_direct_colour_class_array(L"EngineFiles\\Bitmaps\\MainMapSQ.bmp", 1000, 1000));
+	m_StructureOverlayLand = CustomAsset(2000, 1000, astVars.get_bmp_as_direct_colour_class_array(L"EngineFiles\\Bitmaps\\Overlay.bmp", 1000, 1000));
+	m_StructureOverlayBuildings = CustomAsset(2000, 1000, astVars.get_bmp_as_direct_colour_class_array(L"EngineFiles\\Bitmaps\\Overlay.bmp", 1000, 1000));
 	m_Structure = CustomAsset(6, 3, astVars.get_bmp_as_direct_colour_class_array(L"EngineFiles\\\Landscape_Sprites\\Sand.bmp", 3, 3));
 }
 
@@ -26,7 +28,9 @@ ConsoleWindow SYDECityGame::MainMap_Draw(ConsoleWindow window, int windowWidth, 
 {
 	window = m_bg.draw_asset(window, Vector2(0, 0));
 	window = m_Map.draw_asset(window, Vector2(camera_Pos.getX() - 20, camera_Pos.getY() - 10), windowWidth, windowHeight);
-	window = DrawStructuresOnMap(window);
+	window = m_StructureOverlayLand.draw_asset(window, Vector2(camera_Pos.getX() - 20, camera_Pos.getY() - 10), windowWidth, windowHeight);
+	window = m_StructureOverlayBuildings.draw_asset(window, Vector2(camera_Pos.getX() - 20, camera_Pos.getY() - 10), windowWidth, windowHeight);
+	//window = DrawStructuresOnMap(window);
 	window = DrawStructureAtCenter(window);
 	window.setTextAtPoint(Vector2(0, 1), std::to_string((int)camera_Pos.getX()) + "," + std::to_string((int)camera_Pos.getY()), RED_WHITE_BG);
 
@@ -77,34 +81,42 @@ ConsoleWindow SYDECityGame::DrawStructureAtCenter(ConsoleWindow window)
 	window = m_Structure.draw_asset(window, Vector2(20,10));
 	if (SYDEKeyCode::get_key(VK_SPACE)._CompareState(KEYDOWN) && CanPlace())
 	{
-		_structures.push_back(_SCB_Structure(Vector2(camera_Pos.getX() + 20, camera_Pos.getY() + 10), m_Structure));
+		if (m_PlacementType == Land)
+		{
+			m_StructureOverlayLand.AddAssetOnto(m_Structure, camera_Pos);
+		}
+		else
+		{
+			m_StructureOverlayBuildings.AddAssetOnto(m_Structure, camera_Pos);
+		}
+		//_structures.push_back(_SCB_Structure(Vector2(camera_Pos.getX() + 20, camera_Pos.getY() + 10), m_Structure));
 	}
 	return window;
 }
 
-ConsoleWindow SYDECityGame::DrawStructuresOnMap(ConsoleWindow window)
-{
-	for (int i = 0; i < _structures.size(); i++)
-	{
-		if (_structures[i].pos.distance(Vector2(camera_Pos)) < 50)
-		{
-			window = _structures[i]._a.draw_asset(window, _structures[i].pos - camera_Pos);
-		}
-	}
-	return window;
-}
+//ConsoleWindow SYDECityGame::DrawStructuresOnMap(ConsoleWindow window)
+//{
+//	for (int i = 0; i < _structures.size(); i++)
+//	{
+//		if (_structures[i].pos.distance(Vector2(camera_Pos)) < 50)
+//		{
+//			window = _structures[i]._a.draw_asset(window, _structures[i].pos - camera_Pos);
+//		}
+//	}
+//	return window;
+//}
 
 bool SYDECityGame::CanPlace()
 {
 	if (m_PlacementType == Land)
 	{
-		for (int i = 0; i < _structures.size(); i++)
-		{
-			if (_structures[i].pos.distance(Vector2(camera_Pos.getX() + 20, camera_Pos.getY() + 10)) < 3)
-			{
-				return false;
-			}
-		}
+		//for (int i = 0; i < _structures.size(); i++)
+		//{
+		//	if (_structures[i].pos.distance(Vector2(camera_Pos.getX() + 20, camera_Pos.getY() + 10)) < 3)
+		//	{
+		//		return false;
+		//	}
+		//}
 	}
 	return true;
 }
