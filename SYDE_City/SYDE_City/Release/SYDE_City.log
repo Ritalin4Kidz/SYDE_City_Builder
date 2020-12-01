@@ -1,0 +1,55 @@
+﻿  SYDECityGame.cpp
+g:\github repos\syde_city_builder\syde_city\include\consolewindow.h(297): warning C4018: '<': signed/unsigned mismatch
+g:\github repos\syde_city_builder\syde_city\include\consolewindow.h(299): warning C4018: '<': signed/unsigned mismatch
+g:\github repos\syde_city_builder\syde_city\include\consolewindow.h(300): warning C4018: '<': signed/unsigned mismatch
+g:\github repos\syde_city_builder\syde_city\include\settings.h(32): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+g:\github repos\syde_city_builder\syde_city\include\defaults.h(15): warning C4091: 'static ': ignored on left of 'SYDEDefaults' when no variable is declared
+g:\github repos\syde_city_builder\syde_city\include\sydeshapes.h(57): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+g:\github repos\syde_city_builder\syde_city\include\sydeshapes.h(58): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+g:\github repos\syde_city_builder\syde_city\include\sydeshapes.h(59): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+g:\github repos\syde_city_builder\syde_city\include\sydeshapes.h(60): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+g:\github repos\syde_city_builder\syde_city\include\sydeshapes.h(64): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+g:\github repos\syde_city_builder\syde_city\include\sydeshapes.h(97): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+g:\github repos\syde_city_builder\syde_city\include\sydeshapes.h(98): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+g:\github repos\syde_city_builder\syde_city\include\sydeshapes.h(99): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+g:\github repos\syde_city_builder\syde_city\include\sydeshapes.h(100): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+g:\github repos\syde_city_builder\syde_city\include\sydeshapes.h(102): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+g:\github repos\syde_city_builder\syde_city\syde_city\sydecitygame.cpp(8): warning C4129: 'L': unrecognized character escape sequence
+g:\github repos\syde_city_builder\syde_city\syde_city\sydecitygame.cpp(64): warning C4129: 'L': unrecognized character escape sequence
+g:\github repos\syde_city_builder\syde_city\syde_city\sydecitygame.cpp(67): warning C4129: 'L': unrecognized character escape sequence
+g:\github repos\syde_city_builder\syde_city\syde_city\sydecitygame.cpp(70): warning C4129: 'L': unrecognized character escape sequence
+g:\github repos\syde_city_builder\syde_city\syde_city\sydecitygame.cpp(87): warning C4018: '<': signed/unsigned mismatch
+g:\github repos\syde_city_builder\syde_city\syde_city\sydecitygame.cpp(101): warning C4018: '<': signed/unsigned mismatch
+g:\github repos\syde_city_builder\syde_city\syde_city\sydecitygame.cpp(115): warning C4018: '<': signed/unsigned mismatch
+g:\github repos\syde_city_builder\syde_city\syde_city\sydecitygame.cpp(126): warning C4018: '<': signed/unsigned mismatch
+  SYDE_City.cpp
+g:\github repos\syde_city_builder\syde_city\include\consolewindow.h(297): warning C4018: '<': signed/unsigned mismatch
+g:\github repos\syde_city_builder\syde_city\include\consolewindow.h(299): warning C4018: '<': signed/unsigned mismatch
+g:\github repos\syde_city_builder\syde_city\include\consolewindow.h(300): warning C4018: '<': signed/unsigned mismatch
+g:\github repos\syde_city_builder\syde_city\include\settings.h(32): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+g:\github repos\syde_city_builder\syde_city\include\defaults.h(15): warning C4091: 'static ': ignored on left of 'SYDEDefaults' when no variable is declared
+g:\github repos\syde_city_builder\syde_city\include\sydeshapes.h(57): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+g:\github repos\syde_city_builder\syde_city\include\sydeshapes.h(58): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+g:\github repos\syde_city_builder\syde_city\include\sydeshapes.h(59): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+g:\github repos\syde_city_builder\syde_city\include\sydeshapes.h(60): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+g:\github repos\syde_city_builder\syde_city\include\sydeshapes.h(64): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+g:\github repos\syde_city_builder\syde_city\include\sydeshapes.h(97): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+g:\github repos\syde_city_builder\syde_city\include\sydeshapes.h(98): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+g:\github repos\syde_city_builder\syde_city\include\sydeshapes.h(99): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+g:\github repos\syde_city_builder\syde_city\include\sydeshapes.h(100): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+g:\github repos\syde_city_builder\syde_city\include\sydeshapes.h(102): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+g:\github repos\syde_city_builder\syde_city\syde_city\syde_city.cpp(75): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+g:\github repos\syde_city_builder\syde_city\syde_city\syde_city.cpp(90): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+g:\github repos\syde_city_builder\syde_city\syde_city\syde_city.cpp(135): warning C4101: 'e': unreferenced local variable
+LINK : warning C4727: PCH named g:\github repos\custom-console\drawableconsole\release\sydeengine.pch with same timestamp found in g:\github repos\custom-console\drawableconsole\release\sydekeycode.obj and g:\github repos\custom-console\drawableconsole\release\sydekey.obj.  Using first PCH.
+LINK : warning C4727: PCH named g:\github repos\custom-console\drawableconsole\release\sydeengine.pch with same timestamp found in g:\github repos\custom-console\drawableconsole\release\defaults.obj and g:\github repos\custom-console\drawableconsole\release\customasset.obj.  Using first PCH.
+LINK : warning C4727: PCH named g:\github repos\custom-console\drawableconsole\release\sydeengine.pch with same timestamp found in g:\github repos\custom-console\drawableconsole\release\sydetime.obj and g:\github repos\custom-console\drawableconsole\release\vector2.obj.  Using first PCH.
+LINK : warning C4727: PCH named g:\github repos\custom-console\drawableconsole\release\sydeengine.pch with same timestamp found in g:\github repos\custom-console\drawableconsole\release\textitem.obj and g:\github repos\custom-console\drawableconsole\release\vector2.obj.  Using first PCH.
+LINK : warning C4727: PCH named g:\github repos\custom-console\drawableconsole\release\sydeengine.pch with same timestamp found in g:\github repos\custom-console\drawableconsole\release\sydefps.obj and g:\github repos\custom-console\drawableconsole\release\sydecredits.obj.  Using first PCH.
+LINK : warning C4727: PCH named g:\github repos\custom-console\drawableconsole\release\sydeengine.pch with same timestamp found in g:\github repos\custom-console\drawableconsole\release\artwork.obj and g:\github repos\custom-console\drawableconsole\release\assetsclass.obj.  Using first PCH.
+  Generating code
+  3 of 1319 functions ( 0.2%) were compiled, the rest were copied from previous compilation.
+    1 functions were new in current compilation
+    4 functions had inline decision re-evaluated but remain unchanged
+  Finished generating code
+  SYDE_City.vcxproj -> G:\Github Repos\SYDE_City_Builder\SYDE_City\Release\SYDE_City.exe
