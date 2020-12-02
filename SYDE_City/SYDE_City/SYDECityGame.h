@@ -1,6 +1,6 @@
 #pragma once
 #include "SYDEstdafx.h"
-
+#include "Structure.h"
 enum _SCScene {
 	UnknownScene,
 	MainMenu,
@@ -47,4 +47,11 @@ private:
 	CustomAsset m_StructureOverlayLand;
 	CustomAsset m_StructureOverlayBuildings;
 	CustomAsset m_Structure;
+
+	int m_SelectedItem_Index = 0;
+	vector<SYDE_City_Structure> m_LandStructures;
+	vector<SYDE_City_Structure> m_RoadStructures;
+	vector<SYDE_City_Structure> m_BuildingStructures;
+	string m_CurrentStructure = "";
+	string m_PlacementStr = "";
 };

@@ -115,8 +115,8 @@ int main(int argc, char* argv[])
 	SYDEKeyCode::KeyCodes_Optimized.push_back(SYDEKey(VK_TAB));
 	SYDEKeyCode::KeyCodes_Optimized.push_back(SYDEKey(VK_SHIFT));
 	SYDEKeyCode::KeyCodes_Optimized.push_back(SYDEKey(VK_SPACE));
-	SYDEKeyCode::KeyCodes_Optimized.push_back(SYDEKey('T'));
-	SYDEKeyCode::KeyCodes_Optimized.push_back(SYDEKey(VK_BACK));
+	SYDEKeyCode::KeyCodes_Optimized.push_back(SYDEKey('Z'));
+	SYDEKeyCode::KeyCodes_Optimized.push_back(SYDEKey('X'));
 	SYDEKeyCode::KeyCodes_Optimized.push_back(SYDEKey('I'));
 	SYDEKeyCode::KeyCodes_Optimized.push_back(SYDEKey('M'));
 	SYDEKeyCode::KeyCodes_Optimized.push_back(SYDEKey('K'));

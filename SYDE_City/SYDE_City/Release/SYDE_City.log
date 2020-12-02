@@ -14,20 +14,28 @@ g:\github repos\syde_city_builder\syde_city\include\sydeshapes.h(98): warning C4
 g:\github repos\syde_city_builder\syde_city\include\sydeshapes.h(99): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 g:\github repos\syde_city_builder\syde_city\include\sydeshapes.h(100): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
 g:\github repos\syde_city_builder\syde_city\include\sydeshapes.h(102): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-g:\github repos\syde_city_builder\syde_city\syde_city\sydecitygame.cpp(10): warning C4129: 'L': unrecognized character escape sequence
-g:\github repos\syde_city_builder\syde_city\syde_city\sydecitygame.cpp(68): warning C4129: 'L': unrecognized character escape sequence
-g:\github repos\syde_city_builder\syde_city\syde_city\sydecitygame.cpp(71): warning C4129: 'L': unrecognized character escape sequence
-g:\github repos\syde_city_builder\syde_city\syde_city\sydecitygame.cpp(74): warning C4129: 'L': unrecognized character escape sequence
-g:\github repos\syde_city_builder\syde_city\syde_city\sydecitygame.cpp(127): warning C4018: '<': signed/unsigned mismatch
-g:\github repos\syde_city_builder\syde_city\syde_city\sydecitygame.cpp(138): warning C4018: '<': signed/unsigned mismatch
+g:\github repos\syde_city_builder\syde_city\syde_city\sydecitygame.cpp(12): warning C4129: 'L': unrecognized character escape sequence
+g:\github repos\syde_city_builder\syde_city\syde_city\sydecitygame.cpp(13): warning C4129: 'L': unrecognized character escape sequence
+g:\github repos\syde_city_builder\syde_city\syde_city\sydecitygame.cpp(14): warning C4129: 'L': unrecognized character escape sequence
+g:\github repos\syde_city_builder\syde_city\syde_city\sydecitygame.cpp(15): warning C4129: 'L': unrecognized character escape sequence
+g:\github repos\syde_city_builder\syde_city\syde_city\sydecitygame.cpp(19): warning C4129: 'B': unrecognized character escape sequence
+g:\github repos\syde_city_builder\syde_city\syde_city\sydecitygame.cpp(23): warning C4129: 'R': unrecognized character escape sequence
+g:\github repos\syde_city_builder\syde_city\syde_city\sydecitygame.cpp(24): warning C4129: 'R': unrecognized character escape sequence
+g:\github repos\syde_city_builder\syde_city\syde_city\sydecitygame.cpp(25): warning C4129: 'R': unrecognized character escape sequence
+g:\github repos\syde_city_builder\syde_city\syde_city\sydecitygame.cpp(26): warning C4129: 'R': unrecognized character escape sequence
+g:\github repos\syde_city_builder\syde_city\syde_city\sydecitygame.cpp(121): warning C4018: '>=': signed/unsigned mismatch
+g:\github repos\syde_city_builder\syde_city\syde_city\sydecitygame.cpp(129): warning C4018: '>=': signed/unsigned mismatch
+g:\github repos\syde_city_builder\syde_city\syde_city\sydecitygame.cpp(137): warning C4018: '>=': signed/unsigned mismatch
+g:\github repos\syde_city_builder\syde_city\syde_city\sydecitygame.cpp(227): warning C4018: '<': signed/unsigned mismatch
+g:\github repos\syde_city_builder\syde_city\syde_city\sydecitygame.cpp(238): warning C4018: '<': signed/unsigned mismatch
 LINK : warning C4727: PCH named g:\github repos\custom-console\drawableconsole\release\sydeengine.pch with same timestamp found in g:\github repos\custom-console\drawableconsole\release\sydekeycode.obj and g:\github repos\custom-console\drawableconsole\release\sydekey.obj.  Using first PCH.
 LINK : warning C4727: PCH named g:\github repos\custom-console\drawableconsole\release\sydeengine.pch with same timestamp found in g:\github repos\custom-console\drawableconsole\release\defaults.obj and g:\github repos\custom-console\drawableconsole\release\customasset.obj.  Using first PCH.
 LINK : warning C4727: PCH named g:\github repos\custom-console\drawableconsole\release\sydeengine.pch with same timestamp found in g:\github repos\custom-console\drawableconsole\release\vector2.obj and g:\github repos\custom-console\drawableconsole\release\sydetime.obj.  Using first PCH.
 LINK : warning C4727: PCH named g:\github repos\custom-console\drawableconsole\release\sydeengine.pch with same timestamp found in g:\github repos\custom-console\drawableconsole\release\textitem.obj and g:\github repos\custom-console\drawableconsole\release\sydetime.obj.  Using first PCH.
 LINK : warning C4727: PCH named g:\github repos\custom-console\drawableconsole\release\sydeengine.pch with same timestamp found in g:\github repos\custom-console\drawableconsole\release\sydefps.obj and g:\github repos\custom-console\drawableconsole\release\sydecredits.obj.  Using first PCH.
   Generating code
-  150 of 1245 functions (12.0%) were compiled, the rest were copied from previous compilation.
+  147 of 1324 functions (11.1%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    23 functions had inline decision re-evaluated but remain unchanged
+    14 functions had inline decision re-evaluated but remain unchanged
   Finished generating code
   SYDE_City.vcxproj -> G:\Github Repos\SYDE_City_Builder\SYDE_City\Release\SYDE_City.exe

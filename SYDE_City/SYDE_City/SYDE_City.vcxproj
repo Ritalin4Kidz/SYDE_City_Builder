@@ -142,10 +142,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Structure.cpp" />
     <ClCompile Include="SYDECityGame.cpp" />
     <ClCompile Include="SYDE_City.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Structure.h" />
     <ClInclude Include="SYDECityGame.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
