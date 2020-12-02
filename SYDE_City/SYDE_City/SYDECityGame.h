@@ -54,4 +54,5 @@ private:
 	vector<SYDE_City_Structure> m_BuildingStructures;
 	string m_CurrentStructure = "";
 	string m_PlacementStr = "";
+	Vector2 m_PlacementOffset = Vector2(0);
 };

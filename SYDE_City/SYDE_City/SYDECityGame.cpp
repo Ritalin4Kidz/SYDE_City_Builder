@@ -10,13 +10,13 @@ SYDECityGame::SYDECityGame()
 
 	m_LandStructures = vector<SYDE_City_Structure>({
 		SYDE_City_Structure(CustomAsset(6, 3, astVars.get_bmp_as_direct_colour_class_array(L"EngineFiles\\\Landscape_Sprites\\Sand.bmp", 3, 3)), "Sand Small"),
-		SYDE_City_Structure(CustomAsset(10, 5, astVars.get_bmp_as_direct_colour_class_array(L"EngineFiles\\\Landscape_Sprites\\SandLarge.bmp", 5, 5)), "Sand Large"),
+		SYDE_City_Structure(CustomAsset(10, 5, astVars.get_bmp_as_direct_colour_class_array(L"EngineFiles\\\Landscape_Sprites\\SandLarge.bmp", 5, 5)), "Sand Large", Vector2(-2,-1)),
 		SYDE_City_Structure(CustomAsset(6, 3, astVars.get_bmp_as_direct_colour_class_array(L"EngineFiles\\\Landscape_Sprites\\Grass.bmp", 3, 3)), "Grass Small"),
-		SYDE_City_Structure(CustomAsset(10, 5, astVars.get_bmp_as_direct_colour_class_array(L"EngineFiles\\\Landscape_Sprites\\GrassLarge.bmp", 5, 5)), "Grass Large")
+		SYDE_City_Structure(CustomAsset(10, 5, astVars.get_bmp_as_direct_colour_class_array(L"EngineFiles\\\Landscape_Sprites\\GrassLarge.bmp", 5, 5)), "Grass Large", Vector2(-2,-1))
 		});
 
 	m_BuildingStructures = vector<SYDE_City_Structure>({
-		SYDE_City_Structure(CustomAsset(10, 5, astVars.get_bmp_as_direct_colour_class_array(L"EngineFiles\\\Building_Sprites\\NcDonalds.bmp", 5, 5)), "NcDonald's"),
+		SYDE_City_Structure(CustomAsset(18,9, astVars.get_bmp_as_direct_colour_class_array(L"EngineFiles\\\Building_Sprites\\NcDonalds.bmp", 9, 9)), "NcDonald's", Vector2(-6,-3)),
 		});
 
 	m_RoadStructures = vector<SYDE_City_Structure>({
@@ -90,6 +90,7 @@ ConsoleWindow SYDECityGame::DrawStructureAtCenter(ConsoleWindow window)
 			}
 			m_Structure = m_LandStructures[m_SelectedItem_Index].getAsset();
 			m_CurrentStructure = m_LandStructures[m_SelectedItem_Index].getName();
+			m_PlacementOffset = m_LandStructures[m_SelectedItem_Index].getPlacementOffset();
 			break;
 		case Road:
 			if (m_SelectedItem_Index < 0)
@@ -98,6 +99,7 @@ ConsoleWindow SYDECityGame::DrawStructureAtCenter(ConsoleWindow window)
 			}
 			m_Structure = m_RoadStructures[m_SelectedItem_Index].getAsset();
 			m_CurrentStructure = m_RoadStructures[m_SelectedItem_Index].getName();
+			m_PlacementOffset = m_RoadStructures[m_SelectedItem_Index].getPlacementOffset();
 			break;
 		case Building:
 			if (m_SelectedItem_Index < 0)
@@ -106,6 +108,7 @@ ConsoleWindow SYDECityGame::DrawStructureAtCenter(ConsoleWindow window)
 			}
 			m_Structure = m_BuildingStructures[m_SelectedItem_Index].getAsset();
 			m_CurrentStructure = m_BuildingStructures[m_SelectedItem_Index].getName();
+			m_PlacementOffset = m_BuildingStructures[m_SelectedItem_Index].getPlacementOffset();
 			break;
 		default:
 			break;
@@ -124,6 +127,7 @@ ConsoleWindow SYDECityGame::DrawStructureAtCenter(ConsoleWindow window)
 			}
 			m_Structure = m_LandStructures[m_SelectedItem_Index].getAsset();
 			m_CurrentStructure = m_LandStructures[m_SelectedItem_Index].getName();
+			m_PlacementOffset = m_LandStructures[m_SelectedItem_Index].getPlacementOffset();
 			break;
 		case Road:
 			if (m_SelectedItem_Index >= m_RoadStructures.size())
@@ -132,6 +136,7 @@ ConsoleWindow SYDECityGame::DrawStructureAtCenter(ConsoleWindow window)
 			}
 			m_Structure = m_RoadStructures[m_SelectedItem_Index].getAsset();
 			m_CurrentStructure = m_RoadStructures[m_SelectedItem_Index].getName();
+			m_PlacementOffset = m_RoadStructures[m_SelectedItem_Index].getPlacementOffset();
 			break;
 		case Building:
 			if (m_SelectedItem_Index >= m_BuildingStructures.size())
@@ -140,6 +145,7 @@ ConsoleWindow SYDECityGame::DrawStructureAtCenter(ConsoleWindow window)
 			}
 			m_Structure = m_BuildingStructures[m_SelectedItem_Index].getAsset();
 			m_CurrentStructure = m_BuildingStructures[m_SelectedItem_Index].getName();
+			m_PlacementOffset = m_BuildingStructures[m_SelectedItem_Index].getPlacementOffset();
 			break;
 		default:
 			break;
@@ -160,51 +166,42 @@ ConsoleWindow SYDECityGame::DrawStructureAtCenter(ConsoleWindow window)
 			m_CurrentStructure = m_LandStructures[0].getName();
 			m_SelectedItem_Index = 0;
 			m_PlacementStr = " LAND ";
+			m_PlacementOffset = m_LandStructures[0].getPlacementOffset();
 			break;
 		case Road:
 			m_Structure = m_RoadStructures[0].getAsset();
 			m_CurrentStructure = m_RoadStructures[0].getName();
 			m_SelectedItem_Index = 0;
 			m_PlacementStr = " ROADS ";
+			m_PlacementOffset = m_RoadStructures[0].getPlacementOffset();
 			break;
 		case Building:
 			m_Structure = m_BuildingStructures[0].getAsset();
 			m_CurrentStructure = m_BuildingStructures[0].getName();
 			m_SelectedItem_Index = 0;
 			m_PlacementStr = " BUILDINGS ";
+			m_PlacementOffset = m_BuildingStructures[0].getPlacementOffset();
 			break;
 		default:
 			break;
 
 		}
 	}	
-	window = m_Structure.draw_asset(window, Vector2(20,10));
+	window = m_Structure.draw_asset(window, Vector2(20 + m_PlacementOffset.getX() ,10 + m_PlacementOffset.getY()));
 	if (SYDEKeyCode::get_key(VK_SPACE)._CompareState(KEYDOWN) && CanPlace())
 	{
 		if (m_PlacementType == Land)
 		{
-			m_StructureOverlayLand.AddAssetOnto(m_Structure, camera_Pos);
+			m_StructureOverlayLand.AddAssetOnto(m_Structure, camera_Pos + m_PlacementOffset);
 		}
 		else
 		{
-			m_StructureOverlayBuildings.AddAssetOnto(m_Structure, camera_Pos);
+			m_StructureOverlayBuildings.AddAssetOnto(m_Structure, camera_Pos + m_PlacementOffset);
 		}
 		//_structures.push_back(_SCB_Structure(Vector2(camera_Pos.getX() + 20, camera_Pos.getY() + 10), m_Structure));
 	}
 	return window;
 }
-
-//ConsoleWindow SYDECityGame::DrawStructuresOnMap(ConsoleWindow window)
-//{
-//	for (int i = 0; i < _structures.size(); i++)
-//	{
-//		if (_structures[i].pos.distance(Vector2(camera_Pos)) < 50)
-//		{
-//			window = _structures[i]._a.draw_asset(window, _structures[i].pos - camera_Pos);
-//		}
-//	}
-//	return window;
-//}
 
 bool SYDECityGame::CanPlace()
 {
